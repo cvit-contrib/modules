@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+## sentencepiece modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds sentencepiece 1.0 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds sentencepiece to your environment variable"
+
+
+set            app              sentencepiece
+set            version          1.0.0
+set            root             /home/dataset/packages/sentencepiece/0.0/ 
+prepend-path   PATH             $root/bin
+prepend-path   LD_LIBRARY_PATH  $root/lib
+prepend-path   LD_RUN_PATH      $root/lib
+prepend-path   CPATH            $root/include
+
+append-path -d " " CPPFLAGS -I$root/include
+append-path -d " " LDFLAGS -L$root/lib
