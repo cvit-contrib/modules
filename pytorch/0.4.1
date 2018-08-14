@@ -1,0 +1,23 @@
+#%Module0.4.1#####################################################################
+## pytorch modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds pytorch 0.4.1 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds python to your environment variable"
+
+prereq python/3.7.0
+
+set            app              python
+set            version          0.4.1
+set            root             /home/dataset/packages/pytorch/0.4.1
+prepend-path   LD_LIBRARY_PATH  $root/lib
+prepend-path   LD_RUN_PATH      $root/lib
+prepend-path   PYTHONPATH       $root/lib/python3.7/
+
+# append-path -d " " CPPFLAGS -I$root/include
+# append-path -d " " LDFLAGS -L$root/lib
