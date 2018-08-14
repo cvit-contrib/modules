@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+## nccl modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds nccl 2.2.13 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds nccl to your environment variable"
+
+
+set            app              nccl
+set            version          2.2.13
+set            root             /home/dataset/packages/nccl/2.2.13-cuda-9.0
+prepend-path   LD_LIBRARY_PATH  $root/lib
+prepend-path   LD_RUN_PATH      $root/lib
+prepend-path   CPATH            $root/include
+
+append-path -d " " CPPFLAGS -I$root/include
+append-path -d " " LDFLAGS -L$root/lib
