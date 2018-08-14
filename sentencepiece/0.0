@@ -13,7 +13,7 @@ module-whatis	"adds sentencepiece to your environment variable"
 
 set            app              sentencepiece
 set            version          1.0.0
-set            root             /home/dataset/packages/sentencepiece/0.0/ 
+set            root             /home/dataset/packages/sentencepiece/0.0
 prepend-path   PATH             $root/bin
 prepend-path   LD_LIBRARY_PATH  $root/lib
 prepend-path   LD_RUN_PATH      $root/lib
