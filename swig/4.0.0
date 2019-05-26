@@ -1,4 +1,6 @@
-
+#%Module3.7#####################################################################
+## Python modulefile
+##
 proc ModulesHelp { } {
 global version
 
