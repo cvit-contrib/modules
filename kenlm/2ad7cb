@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+## kenlm modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds kenlm 2ad7cb to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds kenlm to your environment variable"
+
+
+set            app              kenlm
+set            version          1.0.0
+set            root             /home/dataset/packages/kenlm/2ad7cb
+prepend-path   PATH             $root/bin
+prepend-path   LD_LIBRARY_PATH  $root/lib
+prepend-path   LD_RUN_PATH      $root/lib
+prepend-path   CPATH            $root/include
+
+append-path -d " " CPPFLAGS -I$root/include
+append-path -d " " LDFLAGS -L$root/lib
