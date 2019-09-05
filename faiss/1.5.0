@@ -20,5 +20,5 @@ prepend-path   LD_RUN_PATH      $root/lib
 prepend-path   PYTHONPATH       $root/lib/python3.7/site-packages
 prepend-path   PATH             $root/bin
 
-#append-path -d " " CPPFLAGS -I$root/include
-#append-path -d " " LDFLAGS -L$root/lib
+append-path -d " " CPPFLAGS -I$root/include
+append-path -d " " LDFLAGS -L$root/lib

@@ -17,7 +17,7 @@ set            root             /home/dataset/packages/caffe/1.0/
 prepend-path   PATH             $root/bin
 prepend-path   LD_LIBRARY_PATH  $root/lib
 prepend-path   LD_RUN_PATH      $root/lib
-prepend-path   PYTHONPATH       $root/lib/python/
+prepend-path   PYTHONPATH       $root/python/
 
 append-path -d " " CPPFLAGS -I$root/include
 append-path -d " " LDFLAGS -L$root/lib
