@@ -1,0 +1,24 @@
+#%Module1.5.0#####################################################################
+## faiss modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds faiss 1.5.0 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds python to your environment variable"
+
+prereq python/3.7.0
+
+set            app              python
+set            version          1.5.0
+set            root             /home/dataset/packages/faiss/1.5.0
+prepend-path   LD_LIBRARY_PATH  $root/lib
+prepend-path   LD_RUN_PATH      $root/lib
+prepend-path   PYTHONPATH       $root/lib/python3.7/site-packages
+prepend-path   PATH             $root/bin
+
+#append-path -d " " CPPFLAGS -I$root/include
+#append-path -d " " LDFLAGS -L$root/lib
