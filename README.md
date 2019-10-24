@@ -17,7 +17,21 @@ Using:
 
 ```
 module load use.own
-module add <your-module>
+module load <your-module>
+```
+
+To check what modules are available
+
+ ```
+ module avail
+```
+
+Eg:
+Loading  fairseq 
+```
+module load use.own
+module load python/3.7.0
+module load pytorch/fairseq/0.7.2
 ```
 
 
