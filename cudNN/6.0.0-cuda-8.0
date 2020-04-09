@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## cuDNN Modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds cuDNN-6.0.0 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds cuDNN-6.0.0 to your environment variable"
+
+set           version          6.0.0
+set           app              cuDNN
+set           root             /home/dataset/cuda-installations/cudNN/6.0.0-cuda-8.0
+append-path   CPATH            $root/include
+append-path   LD_LIBRARY_PATH  $root/lib64
+

@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## CUDA Modulefile
+##
+proc ModulesHelp { } {
+global version
+
+puts stderr "\n\tThis module adds CUDA-8.0 to your environment variable"
+puts stderr "\tDirectory: $root"
+}
+
+module-whatis	"adds CUDA-8.0 to your environment variable"
+
+set           version          8.0
+set           app              CUDA
+set           root             /home/dataset/cuda-installations/cuda-8.0
+prepend-path   PATH             $root/bin
+prepend-path   LD_LIBRARY_PATH  $root/lib64
+
